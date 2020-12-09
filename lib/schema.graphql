@@ -13,3 +13,15 @@ type Query {
   "Devuelve un curso"
   getCourse(id: ID!): Course
 }
+
+input CoarseInput {
+  title: String!
+  teacher: String
+  description: String!
+  topic: String
+}
+
+type Mutation {
+  "Crea un curso"
+  createCourse(input: CoarseInput!): Course
+}
